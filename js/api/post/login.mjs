@@ -2,9 +2,9 @@ import variables from "../variables/index.mjs"
 import storage from "../../api/storage/index.mjs";
 
 export function login (email, password) {
-console.log(email.value)
-console.log(variables.url + "auth/register")
-fetch(variables.url + "auth/register", {
+console.log("https://api.noroff.dev/api/v1/social/auth/login")
+console.log()
+fetch(variables.url + "auth/login", {
     method: 'POST',
     body: JSON.stringify({
     "email": `${email.value}`,
