@@ -3,6 +3,9 @@ import storage from "../../api/storage/index.mjs";
 
 const btn_register = document.querySelector("#btn_register");
 const input_email = document.querySelector("#input_email");
+const input_name = document.querySelector("#input_name");
+const input_avatar = document.querySelector("#input_avatar");
+const input_banner = document.querySelector("#input_banner");
 const input_password = document.querySelector("#input_password");
 const text_error = document.querySelector("#text_error");
 const form = document.querySelector("#form")
@@ -12,7 +15,7 @@ if (btn_register) {
     event.preventDefault();
     for (let i = 0; i < form.length; i++) {
       if(form[i].value){
-        console.log(form[i].value)
+        register(form[i])
       }
       
     }
@@ -20,8 +23,10 @@ if (btn_register) {
   });
 }
 
-export async function register(email, password, text_error) {
+export async function register(form, length) {
   try {
+    console.log(form)
+
     // const data = await fetch(variables.url + "auth/login", {
     //     method: 'POST',
     //     body: JSON.stringify({
