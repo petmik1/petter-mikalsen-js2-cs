@@ -3,4 +3,5 @@ import { register } from "./register.mjs"
 
 export default {
     login,
+    register,
 }
