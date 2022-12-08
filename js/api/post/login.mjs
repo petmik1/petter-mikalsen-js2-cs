@@ -1,7 +1,6 @@
 import variables from "../variables/index.mjs"
 import storage from "../storage/index.mjs";
 const method = "post";
-
 export async function login(profile, text_error) {
   const nav_username = document.querySelector("#nav_username")
   try {
