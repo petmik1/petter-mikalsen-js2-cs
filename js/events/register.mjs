@@ -1,9 +1,8 @@
 import { register } from "../api/post/register.mjs";
 
-
-export function setRegisterFormListener() {
+export function registerFormListener() {
     const form = document.querySelector("#registerForm");
-    
+
     if (form) {
         form.addEventListener("submit", (event) => {
             event.preventDefault();

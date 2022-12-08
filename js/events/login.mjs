@@ -1,5 +1,5 @@
 import { login } from "../api/post/login.mjs";
-export function setLoginFormListener() {
+export function loginFormListener() {
     const form = document.querySelector("#loginForm")
     const text_error = document.querySelector("#text_error")
     if(form){
