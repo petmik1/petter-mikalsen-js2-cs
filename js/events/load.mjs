@@ -7,7 +7,7 @@ export function load (){
          if(!token) {
         location.href = "/login"
       }
-      get.get();
+      get.get("?_author=true&_comments=true&_reactions=true");
     }
     render.updateNavName();
    
