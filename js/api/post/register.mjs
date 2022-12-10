@@ -16,11 +16,10 @@ export async function register(profile) {
   })
   .then((response) => response.json())
   .then((result) => {
-    console.log(result.id)
+    
     storage.save("token", result.accessToken)
 
     if (!result.errors) {
-      console.log(result)
       const user = {
         "email": profile.email,
         "password": profile.password,

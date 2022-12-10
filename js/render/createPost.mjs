@@ -1,14 +1,12 @@
 export function createPost(result) {
     const container = document.querySelector("#main_container");
-    console.log(result)
-
     for (let i = 0; i < result.length; i++) {
+        // create post div
         const div = document.createElement('div');
         div.classList.add("mb-4", "api_div", "bg-light")
         container.appendChild(div);
-        
-        
-
+       
+        // adds title 
         const title = document.createElement('h2');
         title.innerText = result[i].title;
         div.appendChild(title);
