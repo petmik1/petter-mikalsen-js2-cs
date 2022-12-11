@@ -17,7 +17,7 @@ export function eventCreatePost() {
                     delete values[key]
                 }
             })
-            apiCreatePost(values)
+            apiCreatePost(values);
         })
     }
 }
