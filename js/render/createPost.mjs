@@ -1,6 +1,7 @@
 export function createPost(result) {
     const container = document.querySelector("#main_container");
     for (let i = 0; i < result.length; i++) {
+        console.log(result[i])
         // create post div
         const div = document.createElement('div');
         div.classList.add("mb-4", "api_div", "bg-light")

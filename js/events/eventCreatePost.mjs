@@ -1,4 +1,5 @@
-
+import { apiCreatePost } from "../api/post/createPost.mjs";
+import post from "../api/post/index.mjs";
 
 export function eventCreatePost() {
     const form = document.querySelector("#createPostForm");
@@ -9,14 +10,14 @@ export function eventCreatePost() {
 
             const form = event.target;
             const formData = new FormData(form);
-            const profile = Object.fromEntries(formData.entries());
+            const values = Object.fromEntries(formData.entries());
             
-            Object.keys(profile).forEach(key => {
-                if(profile[key] === ""){
-                    delete profile[key]
+            Object.keys(values).forEach(key => {
+                if(values[key] === ""){
+                    delete values[key]
                 }
             })
-            console.log(profile)
+            apiCreatePost(values)
         })
     }
 }

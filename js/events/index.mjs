@@ -16,9 +16,8 @@ if (path === '/register/') {
 } else if (path === '/login/') {
     loginFormListener();
 }
-else if(path === '/index.html') {
+else if(path === '/createpost/') {
     eventCreatePost();
-    load();
-    console.log("test")
 }
 
+load();
