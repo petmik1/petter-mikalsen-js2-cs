@@ -16,6 +16,7 @@ import {
 import {
     tagsArray
 } from "./addTags.mjs";
+import eventDeletePost from "./deletepost.mjs";
 
 export default {
     registerFormListener,
