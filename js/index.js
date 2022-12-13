@@ -5,3 +5,6 @@ import events from "./events/index.mjs";
 import render from "./render/index.mjs";
 import get from "./api/get/index.mjs";
 
+function test(){
+console.log("test")
+}

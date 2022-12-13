@@ -1,3 +1,3 @@
-export function eventDeletePost {
+export function eventDeletePost() {
     
 }

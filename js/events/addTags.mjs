@@ -1,5 +1,5 @@
 export const tagsArray = [];
-export function addtags() {
+export function addTags() {
     const form = document.querySelector("#createPostForm");
     const btn = document.querySelector("#btn_addtags");
     const tagsOutput = document.querySelector("#tagsOutput")

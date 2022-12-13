@@ -1,7 +1,8 @@
 import render from "../render/index.mjs";
 import storage from "../api/storage/index.mjs";
 import get from "../api/get/index.mjs";
-export function load (){
+
+export async function load (){
   const token = storage.load("token")
     if(location.pathname === '/index.html'){
          if(!token) {

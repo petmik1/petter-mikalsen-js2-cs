@@ -2,6 +2,7 @@
 import render from "../../render/index.mjs";
 import storage from "../storage/index.mjs";
 import variables from "../variables/index.mjs";
+import events from "../../events/index.mjs";
 
 
 export async function get(optionalEndpoint) {

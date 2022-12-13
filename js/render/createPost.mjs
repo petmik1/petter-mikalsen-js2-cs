@@ -1,6 +1,6 @@
 import variables from "../api/variables/index.mjs";
 import storage from "../api/storage/index.mjs";
-
+import events from "../events/index.mjs";
 
 export function createPost(result) {
     const container = document.querySelector("#main_container");
@@ -14,20 +14,23 @@ export function createPost(result) {
         div.setAttribute("id", result[i].id)
         container.appendChild(div);
 
-      
-
         // adds title 
         const title = document.createElement('h2');
         title.innerText = result[i].title;
         div.appendChild(title);
 
-        if(result[i].author.name === username){
-            const deleteBtn = document.createElement('button')
-            const editBtn = document.createElement("button")
+        if (result[i].author.name === username) {
+            const deleteBtn = document.createElement('button');
             deleteBtn.innerHTML = "delete";
+            deleteBtn.classList.add("btn", "btn-danger", "test");
+            deleteBtn.setAttribute("value", result[i].id),
+            deleteBtn.setAttribute("type", "button");
+            deleteBtn.addEventListener("click", events.eventDeletePost);
+
+            const editBtn = document.createElement("button")
             editBtn.innerHTML = "edit post"
-            deleteBtn.classList.add("btn", "btn-danger")
             editBtn.classList.add("btn", "btn-info")
+
             div.appendChild(deleteBtn)
             div.appendChild(editBtn)
         }

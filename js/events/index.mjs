@@ -11,20 +11,21 @@ import {
     eventCreatePost
 } from "./eventCreatePost.mjs";
 import {
-    addtags
+    addTags
 } from "./addTags.mjs";
 import {
     tagsArray
 } from "./addTags.mjs";
-import eventDeletePost from "./deletepost.mjs";
+import { eventDeletePost } from "./deletepost.mjs";
 
 export default {
     registerFormListener,
     loginFormListener,
     load,
     eventCreatePost,
-    addtags,
+    addTags,
     tagsArray,
+    eventDeletePost,
 }
 
 const path = location.pathname;
