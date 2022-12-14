@@ -1,23 +1,23 @@
-
-import post from "../api/post/index.mjs";
-
-export function eventCreatePost() {
-    const form = document.querySelector("#createPostForm");
-    const text_error = document.querySelector("#text_error");
-    if(form) {
+import events from "./index.mjs";
+import put from "../api/put/index.mjs";
+export function eventEditPost() {
+    const form = document.querySelector("#editPostForm");
+    if (form) {
         form.addEventListener("submit", event => {
             event.preventDefault();
-
+            
             const form = event.target;
             const formData = new FormData(form);
             const values = Object.fromEntries(formData.entries());
-            
+            values.tags = events.tagsArray;
+            const id = form[5].id;
+
             Object.keys(values).forEach(key => {
                 if(values[key] === ""){
                     delete values[key]
                 }
             })
-            post.apiCreatePost(values);
+            put.put(values, id);
         })
     }
 }

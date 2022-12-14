@@ -16,7 +16,13 @@ import {
 import {
     tagsArray
 } from "./addTags.mjs";
-import { eventDeletePost } from "./deletepost.mjs";
+import {
+    eventDeletePost
+} from "./deletepost.mjs";
+import {
+    eventEditPostPage
+} from "./editPostPage.mjs";
+import { eventEditPost } from "./eventEditPost.mjs";
 
 export default {
     registerFormListener,
@@ -26,6 +32,8 @@ export default {
     addTags,
     tagsArray,
     eventDeletePost,
+    eventEditPostPage,
+    eventEditPost,
 }
 
 const path = location.pathname;
@@ -36,6 +44,9 @@ if (path === '/register/' || path === '/register/index.html') {
     loginFormListener();
 } else if (path === '/createPost' || path === '/createPost/index.html') {
     eventCreatePost();
-    addtags();
+    addTags();
+}else if (path === '/editPost/index.html') {
+ eventEditPostPage();
+ eventEditPost();
 }
 load();

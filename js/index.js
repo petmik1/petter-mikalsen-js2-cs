@@ -5,4 +5,5 @@ import events from "./events/index.mjs";
 import render from "./render/index.mjs";
 import get from "./api/get/index.mjs";
 import _delete from "./api/delete/index.mjs";
+import put from "./api/put/index.mjs";
 

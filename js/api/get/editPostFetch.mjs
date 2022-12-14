@@ -4,25 +4,23 @@ import variables from "../variables/index.mjs";
 import events from "../../events/index.mjs";
 
 
-export async function get(optionalEndpoint, id) {
+export async function editPostGet(optionalEndpoint) {
     try {
         const options = variables.createOptions();
         const container = document.getElementById("#result_container");
         if (!optionalEndpoint) {
             optionalEndpoint = "";
         }
-        if (!id) {
-            id = "";
-        }
-        const finalURL = variables.url + "posts/" + id + optionalEndpoint;
-
+      
+        const finalURL = variables.url + "posts/" + optionalEndpoint;
+        
         const data = await fetch(finalURL, options)
             .then((response) => response.json())
             .then((result) => {
-                render.createPost(result, container)
+               render.editPost(result, optionalEndpoint)
             })
     } catch (error) {
         console.log(error)
-        container.innerText = error;
+        text_error.innerText = result.errors[0].message;
     }
 }

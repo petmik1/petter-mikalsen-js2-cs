@@ -7,7 +7,6 @@ export function createPost(result) {
     for (let i = 0; i < result.length; i++) {
 
         const username = storage.load("username")
-        // console.log(result[i].author.name)
         // create post div
         const div = document.createElement('div');
         div.classList.add("mb-4", "api_div", "bg-light")
@@ -27,9 +26,12 @@ export function createPost(result) {
             deleteBtn.setAttribute("type", "button");
             deleteBtn.addEventListener("click", events.eventDeletePost);
 
-            const editBtn = document.createElement("button")
-            editBtn.innerHTML = "edit post"
-            editBtn.classList.add("btn", "btn-info")
+            const editBtn = document.createElement("a")
+            editBtn.innerHTML = "edit post";
+            editBtn.classList.add("btn", "btn-info");
+            editBtn.setAttribute("href", `./editPost/index.html?id=${result[i].id}` );
+            editBtn.setAttribute("type", "button");
+            editBtn.addEventListener("click", events.eventEditPostPage);
 
             div.appendChild(deleteBtn)
             div.appendChild(editBtn)
