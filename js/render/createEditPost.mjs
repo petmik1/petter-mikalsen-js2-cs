@@ -1,6 +1,10 @@
 import variables from "../api/variables/index.mjs";
 import events from "../events/index.mjs";
-
+/**
+ * adds the old values to the edit form.
+ * @param {*} result 
+ * @param {*} id 
+ */
 export function editPost(result, id) {
     const form = document.querySelector("#editPostForm");
     const tagsOutput = document.querySelector("#tagsOutput");
@@ -8,7 +12,6 @@ export function editPost(result, id) {
         events.tagsArray.push(result.tags[i])
     }
     form[5].id = id;
-    console.log()
     events.addTags();
     form.title.value = result.title;
     form.body.value = result.body;

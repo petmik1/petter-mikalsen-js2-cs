@@ -1,5 +1,10 @@
 import events from "./index.mjs";
 import put from "../api/put/index.mjs";
+/**
+ * eventlistener which gets user input from form. 
+ * then convert the user input to usable information and activate
+ * put function
+ */
 export function eventEditPost() {
     const form = document.querySelector("#editPostForm");
     if (form) {

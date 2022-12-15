@@ -2,7 +2,11 @@ import render from "../../render/index.mjs";
 import storage from "../storage/index.mjs";
 import variables from "../variables/index.mjs";
 import events from "../../events/index.mjs";
-
+/**
+ * gets a specific post from the api and sends it to another function to 
+ * put the information in a form
+ * @param {*} optionalEndpoint 
+ */
 
 export async function editPostGet(optionalEndpoint) {
     try {

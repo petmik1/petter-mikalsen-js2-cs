@@ -1,7 +1,10 @@
 import variables from "../api/variables/index.mjs";
 import storage from "../api/storage/index.mjs";
 import events from "../events/index.mjs";
-
+/**
+ * creates all the html based on the result.
+ * @param {*} result 
+ */
 export function createPost(result) {
     const container = document.querySelector("#main_container");
     container.innerHTML = "";
@@ -18,6 +21,11 @@ export function createPost(result) {
         const title = document.createElement('h2');
         title.innerText = result[i].title;
         div.appendChild(title);
+        
+        // adds author
+        const author = document.createElement('p');
+        author.innerText = "author: " + result[i].author.name;
+        div.appendChild(author);
 
         if (result[i].author.name === username) {
             const deleteBtn = document.createElement('button');
@@ -37,7 +45,6 @@ export function createPost(result) {
             div.appendChild(deleteBtn)
             div.appendChild(editBtn)
         }
-
         // adds media if there is media
         if (result[i].media) {
             const img = document.createElement('img');

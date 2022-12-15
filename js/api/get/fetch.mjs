@@ -3,7 +3,14 @@ import storage from "../storage/index.mjs";
 import variables from "../variables/index.mjs";
 import events from "../../events/index.mjs";
 import { setupSearch } from "../../events/setupSearch.mjs";
-
+/**
+ * fetches posts based on optional endpoint and/or id 
+ * it then sends the information gotten from the api 
+ * to render the html and adding search function
+ * 
+ * @param {*} optionalEndpoint 
+ * @param {*} id 
+ */
 
 export async function get(optionalEndpoint, id) {
     try {

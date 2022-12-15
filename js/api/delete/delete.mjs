@@ -1,5 +1,9 @@
 import variables from "../variables/index.mjs";
 import events from "../../events/index.mjs";
+/**
+ * deletes a post from the api using id
+ * @param {*} optionalEndpoint 
+ */
 export async function apiDelete(optionalEndpoint) {
     try {
         if (optionalEndpoint) {

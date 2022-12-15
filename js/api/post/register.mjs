@@ -3,7 +3,12 @@ import storage from "../storage/index.mjs";
 import variables from "../variables/index.mjs"
 import { login } from "./login.mjs";
 const method = "post";
-
+/**
+ * api call to register the user to the api.
+ * then if call is successfully call login()
+ * function
+ * @param {*} profile 
+ */
 export async function register(profile) {
   try {
       const registerURL = variables.url + "auth/register";

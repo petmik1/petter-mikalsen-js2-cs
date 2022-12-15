@@ -1,6 +1,10 @@
 
 import post from "../api/post/index.mjs";
-
+/**
+ * event which activates on submit of form. 
+ * collects the information from the form and 
+ * feeds it into the apiCreatePost function
+ */
 export function eventCreatePost() {
     const form = document.querySelector("#createPostForm");
     const text_error = document.querySelector("#text_error");

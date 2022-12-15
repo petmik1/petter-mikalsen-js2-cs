@@ -1,24 +1,18 @@
 import variables from "../variables/index.mjs";
-
+/**
+ * api call to update a specific post based on id and userinfo
+ * enterer in a form
+ * @param {*} result 
+ * @param {*} optionalEndpoint 
+ */
 export async function put (result, optionalEndpoint) {
-    console.log(result)
     try {
-        const form = document.querySelector("#editPostForm");
-        
         const finalURL = variables.url + variables.posts + optionalEndpoint;
         
-        result = JSON.stringify(result);
-        console.log(optionalEndpoint)
-        console.log(finalURL)
-        
+        result = JSON.stringify(result);        
         const options = variables.createOptionsBody("put", result);
-        console.log(options)
-        const data = await fetch(finalURL, options)
-            .then((response) => response.json())
-            .then((result) => {
-                console.log(result);
-            })
+        const data = await fetch(finalURL, options);
     } catch (error) {
-        console.log(error)
+        const text_error = document.querySelector("#text_error")
     }
 }

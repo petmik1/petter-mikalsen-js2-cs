@@ -1,8 +1,11 @@
 import { register } from "../api/post/register.mjs";
-
+/**
+ * eventlistener which is activated on form submit. 
+ * Then convert the input from users and sends to 
+ * register function.
+ */
 export function registerFormListener() {
     const form = document.querySelector("#registerForm");
-
     if (form) {
         form.addEventListener("submit", (event) => {
             event.preventDefault();
@@ -15,5 +18,4 @@ export function registerFormListener() {
             register(profile);
         })
     }
-
 }
