@@ -22,7 +22,15 @@ import {
 import {
     eventEditPostPage
 } from "./editPostPage.mjs";
-import { eventEditPost } from "./eventEditPost.mjs";
+import {
+    eventEditPost
+} from "./eventEditPost.mjs";
+import {
+    filterTitle
+} from "./filter/filters.mjs";
+import { filterCreated } from "./filter/filters.mjs";
+import { filterAscending } from "./filter/filters.mjs";
+import { filterDescending } from "./filter/filters.mjs";
 
 export default {
     registerFormListener,
@@ -34,6 +42,10 @@ export default {
     eventDeletePost,
     eventEditPostPage,
     eventEditPost,
+    filterTitle,
+    filterCreated,
+    filterAscending,
+    filterDescending,
 }
 
 const path = location.pathname;
@@ -45,8 +57,13 @@ if (path === '/register/' || path === '/register/index.html') {
 } else if (path === '/createPost' || path === '/createPost/index.html') {
     eventCreatePost();
     addTags();
-}else if (path === '/editPost/index.html') {
- eventEditPostPage();
- eventEditPost();
+} else if (path === '/editPost/index.html') {
+    eventEditPostPage();
+    eventEditPost();
+} else if (path === '/index.html') {
+    load();
+    filterTitle();
+    filterCreated();
+    filterAscending();
+    filterDescending();
 }
-load();

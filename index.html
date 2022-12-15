@@ -35,22 +35,30 @@
     </div>
   </nav>
   <main id="main" class="w-100 mx-auto pt-4 bg-black bg-opacity-10 d-flex flex-column">
-    <div class="d-lg-flex w-75 mx-auto mb-3">
-      <a href="./createPost/index.html" class="btn btn-info w-75 mx-3 mb-lg-0 mb-3">create post</a>
-      <form class="d-flex mx-3 w-75" role="search">
-        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+    <div >
+      <div class="d-lg-flex w-75 mx-auto mb-3 ">
+        <a href="./createPost/index.html" class="btn btn-info w-75 mx-3 mb-lg-0 mb-3">create post</a>
+        <form class="d-flex mx-3 w-75" role="search">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+
+      <form id="filterForm" class="d-lg-flex w-75 mx-auto mb-3 ">
+        <button class="btn btn-dark mx-3" type="button" name="title">title</button>
+        <button class="btn btn-dark mx-3" type="button" name="created">created</button>
+        <button class="btn btn-dark mx-3" type="button" name="ascending">ascending</button>
+        <button class="btn btn-dark mx-3" type="button" name="descending">descending</button>
       </form>
-      <p class="text_text"></p>
-      
+
     </div>
 
     <div id="main_container" class="w-50 mx-auto"></div>
-  <footer id="footer">
+    <footer id="footer">
 
-  </footer>
-  <script src="./node_modules/bootstrap//dist/js/bootstrap.bundle.js"></script>
-  <script src="./js/index.js" type="module"></script>
+    </footer>
+    <script src="./node_modules/bootstrap//dist/js/bootstrap.bundle.js"></script>
+    <script src="./js/index.js" type="module"></script>
 </body>
 
 </html>
