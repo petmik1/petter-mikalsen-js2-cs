@@ -19,7 +19,7 @@ export async function apiDelete(optionalEndpoint) {
         }
 
     } catch (error) {
-        const text_error = document.querySelector(".text_error");
-        text_error.innerText = result.errors[0].message;
+        const text_error = document.querySelector("#text_error");
+        text_error.innerText = variables.error;
     }
 }

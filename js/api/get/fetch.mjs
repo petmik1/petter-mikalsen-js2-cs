@@ -31,7 +31,7 @@ export async function get(optionalEndpoint, id) {
                 setupSearch(result)
             })
     } catch (error) {
-        console.log(error)
-        container.innerText = error;
+        const text_error = document.querySelector("#text_error");
+        text_error.innerText = variables.error;
     }
 }

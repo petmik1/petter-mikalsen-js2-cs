@@ -13,6 +13,7 @@ export async function put (result, optionalEndpoint) {
         const options = variables.createOptionsBody("put", result);
         const data = await fetch(finalURL, options);
     } catch (error) {
-        const text_error = document.querySelector("#text_error")
+        const text_error = document.querySelector("#text_error");
+        text_error.innerText = variables.error;
     }
 }

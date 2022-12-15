@@ -24,7 +24,7 @@ export async function editPostGet(optionalEndpoint) {
                render.editPost(result, optionalEndpoint)
             })
     } catch (error) {
-        console.log(error)
-        text_error.innerText = result.errors[0].message;
+        const text_error = document.querySelector("#text_error");
+        text_error.innerText = variables.error;
     }
 }
