@@ -9,8 +9,6 @@ export async function apiDelete(optionalEndpoint) {
         if (optionalEndpoint) {
             const finalURL = variables.url + "posts/" + optionalEndpoint;
             const options = variables.createOptions("delete")
-            console.log(finalURL)
-            console.log(options)
             const data = await fetch(finalURL, options)
                 .then((response) => response.json())
                 .then((result) => {
