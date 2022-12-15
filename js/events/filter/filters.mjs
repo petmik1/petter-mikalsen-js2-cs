@@ -1,7 +1,7 @@
 import get from "../../api/get/index.mjs"
 
 const form = document.querySelector("#filterForm");
-const defaultOptionalEndpoint = "?_author=true&_comments=true&_reactions=true";
+const defaultOptionalEndpoint = "?_author=true&";
 const optionalEndpoint = [];
 const created = "&sort=created";
 const title = "&sort=title";
@@ -29,7 +29,6 @@ export function filterTitle () {
         }
         else {
             get.get(`${defaultOptionalEndpoint}${optionalEndpoint.join("")}`);
-            console.log(`${defaultOptionalEndpoint}${optionalEndpoint.join("")}`);
         }
         container.innerHTML ="";
        })
@@ -55,7 +54,6 @@ export function filterCreated () {
         }
         else {
             get.get(`${defaultOptionalEndpoint}${optionalEndpoint.join("")}`);
-            console.log(`${defaultOptionalEndpoint}${optionalEndpoint.join("")}`);
         }
         container.innerHTML ="";
         
@@ -82,7 +80,6 @@ export function filterAscending () {
         }
         else {
             get.get(`${defaultOptionalEndpoint}${optionalEndpoint.join("")}`);
-            console.log(`${defaultOptionalEndpoint}${optionalEndpoint.join("")}`);
         }
         container.innerHTML ="";
        })
@@ -108,7 +105,6 @@ export function filterDescending () {
         }
         else {
             get.get(`${defaultOptionalEndpoint}${optionalEndpoint.join("")}`)
-            console.log(`${defaultOptionalEndpoint}${optionalEndpoint.join("")}`)
         }
         container.innerHTML ="";
        

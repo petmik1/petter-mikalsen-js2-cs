@@ -10,7 +10,7 @@ export async function load() {
       location.href = "/login"
     }
 
-    get.get("?_author=true&_comments=true&_reactions=true")
+    get.get("?_author=true")
   }
   render.updateNavName();
 

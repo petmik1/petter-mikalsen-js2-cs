@@ -2,6 +2,7 @@ import render from "../../render/index.mjs";
 import storage from "../storage/index.mjs";
 import variables from "../variables/index.mjs";
 import events from "../../events/index.mjs";
+import { setupSearch } from "../../events/setupSearch.mjs";
 
 
 export async function get(optionalEndpoint, id) {
@@ -19,7 +20,8 @@ export async function get(optionalEndpoint, id) {
         const data = await fetch(finalURL, options)
             .then((response) => response.json())
             .then((result) => {
-                render.createPost(result, container)
+                render.createPost(result, container);
+                setupSearch(result)
             })
     } catch (error) {
         console.log(error)

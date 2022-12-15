@@ -31,6 +31,7 @@ import {
 import { filterCreated } from "./filter/filters.mjs";
 import { filterAscending } from "./filter/filters.mjs";
 import { filterDescending } from "./filter/filters.mjs";
+import { setupSearch } from "./setupSearch.mjs";
 
 export default {
     registerFormListener,
@@ -46,6 +47,7 @@ export default {
     filterCreated,
     filterAscending,
     filterDescending,
+    setupSearch,
 }
 
 const path = location.pathname;

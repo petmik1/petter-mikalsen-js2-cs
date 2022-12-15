@@ -4,8 +4,9 @@ import events from "../events/index.mjs";
 
 export function createPost(result) {
     const container = document.querySelector("#main_container");
+    container.innerHTML = "";
     for (let i = 0; i < result.length; i++) {
-
+        
         const username = storage.load("username")
         // create post div
         const div = document.createElement('div');
