@@ -5,17 +5,13 @@ import events from "../../events/index.mjs";
 /**
  * gets a specific post from the api and sends it to another function to 
  * put the information in a form
- * @param {*} optionalEndpoint 
+ * @param {string} optionalEndpoint 
  */
 
-export async function editPostGet(optionalEndpoint) {
+export async function editPostGet(optionalEndpoint ="") {
     try {
         const options = variables.createOptions();
         const container = document.getElementById("#result_container");
-        if (!optionalEndpoint) {
-            optionalEndpoint = "";
-        }
-      
         const finalURL = variables.url + "posts/" + optionalEndpoint;
         
         const data = await fetch(finalURL, options)

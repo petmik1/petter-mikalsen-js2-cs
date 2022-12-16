@@ -1,6 +1,6 @@
 /**
  * this will remove one item from local storage based on key
- * @param {*} key
+ * @param {string} key
  * ```
  * remove(key);
  * ```

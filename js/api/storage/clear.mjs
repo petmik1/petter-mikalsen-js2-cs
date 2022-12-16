@@ -1,6 +1,6 @@
 /**
  * this clears the whole local storage
- * @param {*} key 
+ * @param {string} key 
  * 
  * ```
  * clear(key);

@@ -2,7 +2,7 @@ import variables from "../api/variables/index.mjs";
 import events from "../events/index.mjs";
 /**
  * adds the old values to the edit form.
- * @param {*} result 
+ * @param {object} result 
  * @param {*} id 
  */
 export function editPost(result, id) {

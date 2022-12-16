@@ -3,13 +3,10 @@ import events from "../../events/index.mjs";
 /**
  * creates a new post based on the user token saved in values 
  * @param {*} values 
- * @param {*} optionalEndpoint 
+ * @param {string} optionalEndpoint 
  */
-export async function apiCreatePost(values, optionalEndpoint) {
+export async function apiCreatePost(values, optionalEndpoint="") {
     try {
-        if (!optionalEndpoint) {
-            optionalEndpoint = "";
-        }
         JSON.stringify()
         const finalURL = variables.url + variables.posts + optionalEndpoint;
         values.tags = events.tagsArray

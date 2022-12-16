@@ -3,13 +3,12 @@ import storage from "../api/storage/index.mjs";
 import events from "../events/index.mjs";
 /**
  * creates all the html based on the result.
- * @param {*} result 
+ * @param {Array || object} result 
  */
 export function createPost(result) {
     const container = document.querySelector("#main_container");
     container.innerHTML = "";
     for (let i = 0; i < result.length; i++) {
-        
         const username = storage.load("username")
         // create post div
         const div = document.createElement('div');
@@ -42,6 +41,10 @@ export function createPost(result) {
             editBtn.setAttribute("type", "button");
             editBtn.addEventListener("click", events.eventEditPostPage);
 
+            const text_error = document.createElement(`p`);
+            text_error.setAttribute("id", `text_error${result[i].id}`)
+
+            div.appendChild(text_error)
             div.appendChild(deleteBtn)
             div.appendChild(editBtn)
         }

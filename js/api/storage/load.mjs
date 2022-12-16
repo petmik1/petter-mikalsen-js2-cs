@@ -1,6 +1,6 @@
 /**
  * returns information from local storage based on the key
- * @param {*} key 
+ * @param {string} key 
  * @returns 
  * ```
  * load(key);

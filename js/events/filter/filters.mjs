@@ -56,7 +56,6 @@ export function filterCreated () {
             get.get(`${defaultOptionalEndpoint}${optionalEndpoint.join("")}`);
         }
         container.innerHTML ="";
-        
        })
     }
 }
@@ -107,7 +106,6 @@ export function filterDescending () {
             get.get(`${defaultOptionalEndpoint}${optionalEndpoint.join("")}`)
         }
         container.innerHTML ="";
-       
        })
     }
 }
