@@ -5,27 +5,20 @@ import events from "../../events/index.mjs";
  * @param {string} id 
  */
 export async function apiDelete(id) {
-    
     try {
-        
-            const finalURL = variables.url + "posts/" + id;
-            const options = variables.createOptions("delete")
-            const data = await fetch(finalURL, options)
-            .then((response) => response.json())
-            .then((result) => {
-                if(result.ok){
-                    console.log(result)
-                }
-            })
-           
-            
-        
-// window.location.reload()
+        const finalURL = variables.url + "posts/" + id;
+        const options = variables.createOptions("delete")
+        const data = await fetch(finalURL, options)
+        const json = await data.json();
+
+        if (data.ok) {
+            window.location.reload()
+        } else {
+            const text_error = document.querySelector("#text_error" + id)
+            text_error.innerHTML = "something went wrong, please try again"
+            throw new Error("delete failed")
+        }
     } catch (error) {
-        const text_error = document.querySelector("#text_error"+id)
-        console.log(text_error+id)
-        text_error.innerHTML = "there where an error when trying to delete your post.";
         console.log(error)
-        
     }
 }
