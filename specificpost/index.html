@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t-social</title>
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-light ">
+    <div class="container-fluid w-75 mx-auto">
+      <a class="navbar-brand" href="#">Social</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" id="logout" href="#">logout</a>
+          </li>
+        </ul>
+        <div class="nav-item">
+          <p id="nav_username" class="me-auto mb-2 mb-lg-0 mr-2"></p>
+        </div>
+
+
+      </div>
+    </div>
+  </nav>
+  <main id="main" class="w-100 mx-auto pt-4 bg-black bg-opacity-10 d-flex flex-column">
+    <div >
+      <div class="d-lg-flex w-75 mx-auto mb-3 ">
+        <a href="./createPost/index.html" class="btn btn-info w-75 mx-3 mb-lg-0 mb-3">create post</a>
+        <form class="d-flex mx-3 w-75" id="searchForm">
+          <input class="form-control" type="search" placeholder="Search" name="input" minlength="3" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        
+      </div>
+    
+      <p id="text_error" class="w-75 mx-auto"></p>
+    </div>
+ 
+    <div id="main_container" class="w-75  mx-auto">
+      <div class="lds-dual-ring mx-auto d-flex"></div>
+    </div>
+    <footer id="footer">
+
+    </footer>
+    <script src="../node_modules/bootstrap//dist/js/bootstrap.bundle.js"></script>
+    <script src="../js/index.js" type="module"></script>
+</body>
+
+</html>
