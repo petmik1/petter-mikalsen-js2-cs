@@ -9,7 +9,7 @@ export async function apiDelete(id) {
         const finalURL = variables.url + "posts/" + id;
         const options = variables.createOptions("delete")
         const data = await fetch(finalURL, options)
-        const json = await data.json();
+            
 
         if (data.ok) {
             window.location.reload()

@@ -1,1 +1,0 @@
-export const error = "somthing went wrong when calling the server, please try again";

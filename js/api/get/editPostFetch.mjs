@@ -21,6 +21,6 @@ export async function editPostGet(optionalEndpoint ="") {
             })
     } catch (error) {
         const text_error = document.querySelector("#text_error");
-        text_error.innerText = variables.error;
+        text_error.innerText = "something went wrong when trying to fetch your post, please try again";
     }
 }

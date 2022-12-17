@@ -16,8 +16,7 @@ export function loginFormListener() {
             const formData = new FormData(form);
             const profile = Object.fromEntries(formData.entries());
             // sending profile to api
-            login(profile, text_error);
-
+            login(profile);
         })
     }
 

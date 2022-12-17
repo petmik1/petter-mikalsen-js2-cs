@@ -5,7 +5,7 @@ import storage from "../storage/index.mjs"
  * do and the headers which contain the authentication
  * and some extra info. 
  * 
- * @param {*} method 
+ * @param {string} method 
  * @returns 
  */
 export function createOptions(method) {
@@ -26,7 +26,7 @@ export function createOptions(method) {
  * a body is also added which is used when there is necessary to add 
  * information to the api.
  * 
- * @param {*} method 
+ * @param {string} method 
  * @param {*} values 
  * @returns 
  */
