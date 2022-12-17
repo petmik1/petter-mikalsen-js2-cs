@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build": "scss src/scss:css"
+    "build": "scss src/scss:css",
+    "install": "i bootstrap & -D sass"
   },
   "dependencies": {
     "bootstrap": "^5.2.3"
