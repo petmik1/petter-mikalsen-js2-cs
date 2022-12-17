@@ -28,10 +28,20 @@ import {
 import {
     filterTitle
 } from "./filter/filters.mjs";
-import { filterCreated } from "./filter/filters.mjs";
-import { filterAscending } from "./filter/filters.mjs";
-import { filterDescending } from "./filter/filters.mjs";
-import { setupSearch } from "./setupSearch.mjs";
+import {
+    filterCreated
+} from "./filter/filters.mjs";
+import {
+    filterAscending
+} from "./filter/filters.mjs";
+import {
+    filterDescending
+} from "./filter/filters.mjs";
+import {
+    setupSearch
+} from "./setupSearch.mjs";
+import { logout } from "./logout.mjs";
+
 
 export default {
     registerFormListener,
@@ -48,6 +58,8 @@ export default {
     filterAscending,
     filterDescending,
     setupSearch,
+    logout,
+
 }
 
 const path = location.pathname;
@@ -68,4 +80,8 @@ if (path === '/register/' || path === '/register/index.html') {
     filterCreated();
     filterAscending();
     filterDescending();
+    logout();
+}else if (path === '/specificpost/index.html') {
+    load();
+    logout();
 }

@@ -7,7 +7,7 @@ const method = "post";
  */
 export async function login(profile) {
   try {
-    console.log(profile)
+
     const loginURL = variables.url + "auth/login";
     const data = await fetch(loginURL, {
       headers: {

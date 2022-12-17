@@ -8,11 +8,23 @@ import get from "../api/get/index.mjs";
  * Then it also runs the updateNavName
  */
 export async function load() {
+
   const token = storage.load("token");
+
+  if(location.pathname === '/specificpost/index.html') {
+     const queryString = window.location.search;
+
+    const urlParams = new URLSearchParams(queryString);
+    const id = urlParams.get(`id`);
+    get.get("?_author=true", id);
+  }
+
   if (location.pathname === '/index.html') {
     if (!token) {
       location.href = "/login";
     }
+   
+    
     get.get("?_author=true");
     render.updateNavName();
   }
