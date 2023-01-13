@@ -19,11 +19,10 @@ export async function load() {
     get.get("?_author=true", id);
   }
 
-  if (location.pathname === '/index.html') {
+  if (location.pathname === '/index.html' || `/`) {
     if (!token) {
       location.href = "/login";
     }
-   
     
     get.get("?_author=true");
     render.updateNavName();

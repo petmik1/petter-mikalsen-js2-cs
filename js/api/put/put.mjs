@@ -7,7 +7,7 @@ import variables from "../variables/index.mjs";
  */
 export async function put(result, optionalEndpoint = "") {
     try {
-        const finalURL = variables.url + variables.posts + optionalEndpoint;
+        const finalURL = variables.url + "posts/" + optionalEndpoint;
 
         result = JSON.stringify(result);
         const options = variables.createOptionsBody("put", result);
