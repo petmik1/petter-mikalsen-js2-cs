@@ -66,10 +66,10 @@ const path = location.pathname;
 
 if (path === '/register/' || path === '/register/index.html') {
     registerFormListener();
-    load();
+
 } else if (path === '/login/' || path === '/login/index.html') {
     loginFormListener();
-    load();
+
 } else if (path === '/createPost' || path === '/createPost/index.html') {
     eventCreatePost();
     addTags();
