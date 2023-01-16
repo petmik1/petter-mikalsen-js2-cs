@@ -1,11 +1,27 @@
 {
   "scripts": {
-    "build": "scss src/scss:css"
+    "watch": "scss --watch src/scss:css & live-server"
   },
+  "type": "module",
   "dependencies": {
     "bootstrap": "^5.2.3"
   },
   "devDependencies": {
+    "live-server": "^1.1.0",
     "scss": "^0.2.4"
-  }
+  },
+  "name": "petter-mikalsen-js2-cs",
+  "description": "To apply knowledge of JavaScript techniques to implement the front-end functionality for a social media application.",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petmik1/petter-mikalsen-js2-cs.git"
+  },
+  "author": "petmik1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petmik1/petter-mikalsen-js2-cs/issues"
+  },
+  "homepage": "https://github.com/petmik1/petter-mikalsen-js2-cs#readme"
 }
